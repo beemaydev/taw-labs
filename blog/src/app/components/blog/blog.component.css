@@ -1,0 +1,10 @@
+.card {
+    margin: 100px 10px 100px 10px;
+    text-align: center;
+}
+
+.constainer {
+    margin: 0 auto;
+    width: 1000px;
+    padding: 10px;
+}

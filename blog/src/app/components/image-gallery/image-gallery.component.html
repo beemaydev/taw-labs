@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <h2>Galeria zdjęć</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+    <div *ngFor="let imageUrl of imageUrls" class="col">
+      <img [src]="imageUrl" alt="Zdjęcie z posta" class="img-fluid rounded shadow-sm gallery-item"
+        (click)="openFullscreen(imageUrl)">
+    </div>
+  </div>
+
+  <div *ngIf="selectedImageUrl" class="fullscreen-overlay" (click)="closeFullscreen()">
+    <img [src]="selectedImageUrl" alt="Powiększone zdjęcie" class="fullscreen-image">
+    <button type="button" class="btn btn-danger btn-sm close-button" (click)="closeFullscreen()">
+      X
+    </button>
+  </div>
+</div>

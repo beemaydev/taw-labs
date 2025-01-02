@@ -1,0 +1,10 @@
+<div>
+    <textarea [(ngModel)]="newComment" placeholder="Dodaj swój komentarz" class="form-control"></textarea><br>
+    <button (click)="addComment()" class="btn btn-success">Dodaj komentarz</button><br><br>
+
+    <div *ngFor="let comment of comments" class="card mb-2">
+        <div class="card-body left">
+            {{ comment }}
+        </div>
+    </div>
+</div>

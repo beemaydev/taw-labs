@@ -1,0 +1,9 @@
+<div class="constainer">
+  <image-gallery></image-gallery>
+  <add-post></add-post>
+
+  <div class="card" *ngFor="let item of items">
+    <blog-item [id]="item.id" [image]="item.image" [text]="item.text">
+    </blog-item>
+  </div>
+</div>
