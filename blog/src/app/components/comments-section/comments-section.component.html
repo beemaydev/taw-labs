@@ -1,0 +1,13 @@
+<div class="box">
+    <textarea [(ngModel)]="newComment" placeholder="Dodaj swój komentarz" class="form-control"></textarea><br>
+    <button (click)="addComment()" class="btn btn-success">Dodaj komentarz</button><br><br>
+
+    <div class="card mb-2">
+        @for (comment of comments; track $index) {
+        <div class="card-body left">
+            {{ comment }}
+        </div>
+        }
+
+    </div>
+</div>

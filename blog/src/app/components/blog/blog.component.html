@@ -1,0 +1,17 @@
+<div class="constainer">
+  <button class="btn btn-success" (click)="refreshPosts()">Odśwież posty</button>
+
+  @for (item of items$ | filterText: filter; track $index) {
+  <div class="card">
+    <app-blog-item [title]="item.title" [image]="item.image" [text]="item.text" [id]="item._id">
+    </app-blog-item>
+  </div>
+  } @empty {
+  <div class="constainer">
+    <p class="alert">Brak wyników spełniających kryteria wyszukiwania</p>
+  </div>
+  }
+
+  <add-post></add-post>
+  <image-gallery></image-gallery>
+</div>

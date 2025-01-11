@@ -1,0 +1,15 @@
+.img {
+    width: 400px;
+}
+
+.text {
+    padding: 10px;
+    margin-top: 50px;
+    font-size: 32px;
+}
+
+.box {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 75px;
+}

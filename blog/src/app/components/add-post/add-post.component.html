@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Dodaj nowy post</h2>
+  <div>
+    <label for="post-title">Tytuł:</label>
+    <input type="text" id="post-title" [(ngModel)]="newPostTitle" class="form-control">
+  </div>
+  <div>
+    <label for="post-text">Treść:</label>
+    <textarea id="post-text" [(ngModel)]="newPostText" class="form-control"></textarea>
+  </div>
+  <div>
+    <label for="post-image">URL obrazka:</label>
+    <input type="text" id="post-image" [(ngModel)]="newPostImage" class="form-control">
+  </div>
+  <br>
+  <button (click)="addPost()" class="btn btn-primary">Dodaj post</button>
+</div>
