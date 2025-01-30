@@ -1,0 +1,8 @@
+<div class="box">
+  <button class="btn btn-danger deleteButton" (click)="deletePostF()">Delete</button>
+  <h5 class="card-title">{{ title }}</h5>
+  <blog-item-image [image]="image"></blog-item-image>
+  <blog-item-text [text]="text" [id]="id"></blog-item-text>
+
+  <comments-section [postId]="id"></comments-section>
+</div>

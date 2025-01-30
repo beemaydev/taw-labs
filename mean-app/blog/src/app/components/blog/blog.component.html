@@ -1,0 +1,26 @@
+<div #top></div>
+
+<div class="constainer">
+  
+  <button class="btn btn-info" (click)="scroll(end)">Scroll To End</button><br><br>
+
+  <button class="btn btn-warning" (click)="refreshPosts()">Odśwież posty</button>
+  
+
+  @for (item of items$ | filterText: filter; track $index) {
+  <div class="card">
+    <app-blog-item [title]="item.title" [image]="item.image" [text]="item.text" [id]="item._id" (postDeleted)="onPostDeleted()">
+    </app-blog-item>
+  </div>
+  <hr>
+  } @empty {
+  <div class="constainer">
+    <p class="alert">Brak wyników spełniających kryteria wyszukiwania</p>
+  </div>
+  }
+
+  <button class="btn btn-info" (click)="scroll(top)">Scroll To Top</button>
+  
+</div>
+
+<div #end></div>

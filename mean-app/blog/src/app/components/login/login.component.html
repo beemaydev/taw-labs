@@ -1,0 +1,23 @@
+<div class="container">
+    <h1 class="entry-title"><span>Login:</span></h1>
+    <hr>
+    <br>
+    <form action="post" autocomplete="off" method="POST">
+        <div class="input-group">
+            <input [(ngModel)]="credentials.login" type="text" class="form-control" name="username" placeholder="Nazwa"
+                title="Login">
+        </div><br>
+        <div class="input-group">
+            <input [(ngModel)]="credentials.password" type="password" class="form-control" name="password"
+                placeholder="Hasło" title="Password">
+        </div><br>
+        <button (click)="signIn()" class="btn btn-primary" type="submit" title="Przycisk zaloguj">
+            Sign in
+        </button>
+    </form>
+    @if (error) {
+        <div class="alert alert-danger" role="alert">
+            Błąd! Wprowadź poprawne dane logowania.
+        </div>
+        }
+</div>

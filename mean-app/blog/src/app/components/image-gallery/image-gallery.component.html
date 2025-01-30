@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h2>Galeria zdjęć</h2><br>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+
+    @for (imageUrl of imageUrls; track $index) {
+    <div class="col">
+      <img [src]="imageUrl" alt="Zdjęcie z posta" class="img-fluid rounded shadow-sm gallery-item oneImg"
+        (click)="openFullscreen(imageUrl)">
+    </div>
+    }
+
+  </div>
+
+  @if (selectedImageUrl) {
+  <div class="fullscreen-overlay" (click)="closeFullscreen()">
+    <img [src]="selectedImageUrl" alt="Powiększone zdjęcie" class="fullscreen-image">
+    <button type="button" class="btn btn-danger btn-sm close-button" (click)="closeFullscreen()">
+      X
+    </button>
+  </div>
+  }
+
+</div>
