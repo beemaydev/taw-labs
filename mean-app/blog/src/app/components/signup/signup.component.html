@@ -1,19 +1,19 @@
 <section class="signup container">
-    <h1 class="entry-title"><span>Create Account</span></h1>
+    <h1 class="entry-title"><span>Utwórz konto:</span></h1>
     <hr>
     <form class="form-horizontal" method="post" name="signup" id="signup">
         <div class="form-group">
-            <label class="control-label col-sm-3">Email<span class="text-danger">*</span></label>
+            <label class="control-label col-sm-3">Email:<span class="text-danger">*</span></label>
             <div class="col-md-8 col-sm-9">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                    <input type="email" class="form-control" name="emailid" id="emailid" placeholder="Type email"
+                    <input type="email" class="form-control" name="emailid" id="emailid" placeholder="Wpisz adres email"
                         value="" [(ngModel)]="credentials.email">
                 </div>
             </div>
         </div><br>
         <div class="form-group">
-            <label class="control-label col-sm-3">Password<span class="text-danger">*</span></label>
+            <label class="control-label col-sm-3">Hasło:<span class="text-danger">*</span></label>
             <div class="col-md-5 col-sm-8">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
@@ -23,15 +23,15 @@
             </div>
         </div><br>
         <div class="form-group">
-            <label class="control-label col-sm-3">Name <span class="text-danger">*</span></label>
+            <label class="control-label col-sm-3">Nazwa:<span class="text-danger">*</span></label>
             <div class="col-md-8 col-sm-9">
-                <input type="text" class="form-control" name="mem_name" id="mem_name" placeholder="Type name" value=""
+                <input type="text" class="form-control" name="mem_name" id="mem_name" placeholder="Wpisz nazwę" value=""
                     [(ngModel)]="credentials.name">
             </div>
         </div><br>
         <div class="form-group">
             <div class="col-xs-offset-3 col-xs-10">
-                <button (click)="create()" name="Submit" type="submit" class="btn btn-primary">Sing Up
+                <button (click)="create()" name="Submit" type="submit" class="btn btn-primary">Zarejestruj się
                 </button>
             </div>
         </div>

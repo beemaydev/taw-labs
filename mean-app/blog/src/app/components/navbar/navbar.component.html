@@ -8,16 +8,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" [routerLink]="['/']">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#" [routerLink]="['/']">Strona domowa</a>
                 </li>
                 <li *ngIf="authService.isLoggedIn()" class="nav-item">
                     <a class="nav-link" href="#" [routerLink]="['/blog']">Blog</a>
                 </li>
                 <li *ngIf="authService.isLoggedIn()" class="nav-item">
-                    <a class="nav-link" href="#" [routerLink]="['/blog/gallery']">Gallery</a>
+                    <a class="nav-link" href="#" [routerLink]="['/blog/gallery']">Galeria</a>
                 </li>
                 <li *ngIf="authService.isLoggedIn()" class="nav-item">
-                    <a class="nav-link" href="#" [routerLink]="['/blog/addPost']">Add post</a>
+                    <a class="nav-link" href="#" [routerLink]="['/blog/addPost']">Dodaj post</a>
                 </li>
             </ul>
             @if (login) {
@@ -27,9 +27,9 @@
             }
             <div class="d-flex">
                 <div class="d-flex navbar-nav me-auto mb-2 mb-lg-0" *ngIf="!authService.isLoggedIn()">
-                    <button class="btn nav-link" (click)="loginUser()">Login</button>
+                    <button class="btn nav-link" (click)="loginUser()">Zaloguj</button>
                     <!-- <a class="nav-link" href="#" [routerLink]="['/login']">Login</a> -->
-                    <a class="nav-link" href="#" [routerLink]="['/signup']">SignUp</a>
+                    <a class="nav-link" href="#" [routerLink]="['/signup']">Zarejestruj się</a>
                 </div>
                 <button *ngIf="authService.isLoggedIn()" class="btn nav-link" (click)="signOut()">Wyloguj</button>
             </div>

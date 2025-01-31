@@ -29,8 +29,8 @@ class TokenService {
                 return result;
             }
         } catch (error) {
-            console.error('Wystąpił błąd podczas tworzenia danych:', error);
-            throw new Error('Wystąpił błąd podczas tworzenia danych');
+            console.error('Wystąpił błąd podczas tworzenia tokenu:', error.message);
+            // throw new Error('Wystąpił błąd podczas tworzenia danych');
         }
     }
 
@@ -46,12 +46,13 @@ class TokenService {
             });
             console.log(result)
             if (result.deletedCount === 0) {
-                throw new Error('Wystąpił błąd podczas usuwania danych');
+                console.error('Usunieto poprzednią sesję');
+                // throw new Error('Wystąpił błąd podczas usuwania danych');
             }
             return result;
         } catch (error) {
-            console.error('Error while removing token:', error);
-            throw new Error('Error while removing token');
+            console.error('Wystąpił błąd podczas usuwania tokenu:', error.message);
+            // throw new Error('Error while removing token');
         }
     }
 }

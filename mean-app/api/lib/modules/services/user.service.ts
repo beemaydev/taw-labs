@@ -13,8 +13,8 @@ class UserService {
                     { $set: user }, { new: true });
             }
         } catch (error) {
-            console.error('Wystąpił błąd podczas tworzenia danych: ', error);
-            throw new Error('Wystąpił błąd podczas tworzenia danych');
+            console.error('Wystąpił błąd podczas tworzenia użytkownika: ', error.message);
+            // throw new Error('Wystąpił błąd podczas tworzenia danych');
         }
     }
 
@@ -30,8 +30,8 @@ class UserService {
                 return result;
             }
         } catch (error) {
-            console.error('Wystąpił błąd podczas pobierania danych: ', error);
-            throw new Error('Wystąpił błąd podczas pobierania danych');
+            console.error('Wystąpił błąd podczas pobierania danych użytkownika: ', error.message);
+            // throw new Error('Wystąpił błąd podczas pobierania danych');
         }
     }
 }
